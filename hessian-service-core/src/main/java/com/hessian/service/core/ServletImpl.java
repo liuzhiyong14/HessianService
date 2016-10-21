@@ -38,10 +38,10 @@ public class ServletImpl extends HessianServlet implements IServlet {
 		}
 		
 		User user = new User();
-		user.setName("老四");
+		user.setName(param.getName());
 		user.setAge(18);
 		user.setSex(1);
-		user.setCard(1233243242l);
+		user.setCard(param.getCard());
 		
 		return user;
 	}
