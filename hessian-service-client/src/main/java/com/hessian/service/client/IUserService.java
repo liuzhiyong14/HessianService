@@ -6,9 +6,15 @@ import com.hessian.service.common.RequestParam;
 import com.hessian.service.common.User;
 
 public interface IUserService {
-	String hello(String message);
+	public String hello(String message);
 
-	Map<String, Object> getById(long id);
+	public Map<String, Object> getById(long id);
 	
-	User getUser(RequestParam param);
+	public User getUser(RequestParam param);
+	
+	public void setToken(String token);
+	
+	public String generatorToken(String userName);  
+    
+    public boolean validateToken(String token);
 }
